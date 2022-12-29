@@ -1,0 +1,59 @@
+@import "@Constants/constants";
+
+.slide {
+    width: @slider-width;
+    flex: 0 0 auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.slide:not(:last-child) {
+    margin-right: 100%;
+}
+
+.slide__left {
+    width: 660px;
+    height: 580px;
+    flex: 0 0 auto;
+}
+
+.slide__title {
+    width: 90vw;
+    max-width: 100%;
+    margin-top: 143px;
+    font-size: 64px;
+    font-weight: 700;
+    @media (max-width:@small-width) {
+        font-size: 38px;
+    }
+}
+
+.slide__description {
+    width: 90vw;
+    max-width: 100%;
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.slide__button {
+    margin-top: 87px;
+
+    @media (max-width:@large-width) {
+        display: none;
+    }
+    @media (max-width:@small-width) {
+        display: inline;
+    }
+}
+
+.slide__img {
+    vertical-align: bottom;
+    right: 0px;
+
+    @media (max-width:@large-width) {
+        display: none;
+    }
+}
+

@@ -8,6 +8,7 @@ import 'core-js';
 
 import App from './src/App';
 
+import "@Styles/initial.css"
 import '@Styles/global.css';
 
 const root = ReactDOM.createRoot(document.getElementById('app-root'));

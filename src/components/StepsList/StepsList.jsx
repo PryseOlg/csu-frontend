@@ -6,8 +6,8 @@ import Step from "./Steps/Step"
 const StepsList = function ({ steps }) {
     const renderSteps = () => {
         const _steps = [];
-        steps.forEach(step => {
-            _steps.push(<Step image={step.image} title={step.title} description={step.description} />)
+        steps.map((step, index) => {
+            _steps.push(<Step key={"step-" + index} image={step.image} title={step.title} description={step.description} />)
         })
 
         return _steps;

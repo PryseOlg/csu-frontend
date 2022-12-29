@@ -83,14 +83,14 @@ const Slider = function ({autoPlay, autoPlayTime, allSlides }) {
     const renderDots = () => {
         const dots = [];
         for (let i = 0; i < slidesCount; i++) {
-            dots.push(<Dot number={i} />);
+            dots.push(<Dot key={"dot-" + i} number={i} />);
         }
 
         return dots;
     };
 
     return (
-        <slider
+        <div
             className="slider"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}>
@@ -104,7 +104,7 @@ const Slider = function ({autoPlay, autoPlayTime, allSlides }) {
                 <SlidesList />
                 <div className="slider__dots">{renderDots()}</div>
             </SliderContext.Provider>
-        </slider>
+        </div>
     );
 };
 

@@ -1,0 +1,161 @@
+@import "@Constants/constants";
+
+.small-header__middle-zone {
+    height: 106px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.small-header__middle-zone .menu__right {
+    overflow-y: hidden;
+}
+
+.small-header__middle-zone .menu__line {
+    @media (max-width:@large-width) {
+        display: none;
+    }
+}
+
+.small-header__middle-zone .menu__left a {
+    @media (max-width:@large-width) {
+        display: none;
+    }
+}
+
+.news-body {
+    width: 90%;
+    max-width: @slider-width;
+    display: flex;
+    flex-direction: column;
+    row-gap: 75px;
+    margin-top: 175px;
+    margin-bottom: 140px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.description__title {
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.description__text {
+    font-size: 16px;
+}
+
+.news-form__input {
+    width: 100%;
+    max-width: @news-textarea-width;
+    height: 144px;
+    border: 2px #23415E solid;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    line-height: 20px;
+    resize: none;
+}
+.news-form__input::placeholder {
+    color: #D0C9D6;
+}
+.news-form__input::-webkit-scrollbar{
+	width: 8px;
+}
+.news-form__input::-webkit-scrollbar-track{
+	background-color: #d6d2d8;
+    border-radius: 6px;
+}
+.news-form__input::-webkit-scrollbar-thumb{
+	border-radius: 6px;
+	background-color: #9f95a8;
+}
+
+.news-form__input_color_red::placeholder {
+    color: @red-text-color;
+}
+
+.news-form__symbols-counter {
+    max-width: @news-textarea-width;
+    color: #D0C9D6;
+    text-align: end;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.news-form__symbols-counter_color_red {
+    color: @red-text-color;
+}
+
+.news-from__image-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 35px;
+}
+
+.news-from__image-block label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 17px;
+    overflow-y: hidden
+}
+
+.news-from__image-block input {
+    position: absolute;
+	z-index: -1;
+    display: none;
+}
+
+.news-from__image-block span {
+    color: @dark-blue-text-color;
+    font-size: 16px;
+    font-weight: 600;
+	cursor: pointer;
+	line-height: 24px;
+    white-space: nowrap;
+}
+
+.loaded-image-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.loaded-image-block__image {
+    width: 32px;
+    height: 32px;
+}
+
+.loaded-image-block__image-name {
+    font-size: 16px;
+    margin-left: 35px;
+    margin-right: 16px;
+    white-space: nowrap;
+}
+
+.loaded-image-block__cross-image {
+    width: 18px;
+    height: 18px;
+}
+.loaded-image-block__cross-image:hover { filter: hue-rotate(50deg); }
+.loaded-image-block__cross-image:active { filter: hue-rotate(100deg); }
+
+.loaded-image-block__error-text {
+    color: @red-text-color;
+    font-size: 16px;
+    text-align: center;
+}
+
+.news-from__image-block + .yellow-button {
+    margin-top: 117px;
+}

@@ -23,13 +23,13 @@ export default function Popup({ isVisible, setSelfVisibility }) {
                         <p className="popyp__text">Введите логин и пароль, чтобы войти в личный кабинет</p>
                     </div>
                     <div className="popup__body">
-                        <form className="popup__form" action={SITE_PLACEHOLDER}>
+                        <form className="popup__form" action="/login" method="POST">
                             <input 
                                 className="popup__form-element"
                                 type="text"
                                 name="username"
-                                maxlength="15"
-                                minlength="4"
+                                maxLength="15"
+                                minLength="4"
                                 pattern={EMAIL_REGEX}
                                 placeholder="Логин"
                                 required/>
@@ -37,7 +37,7 @@ export default function Popup({ isVisible, setSelfVisibility }) {
                                 className="popup__form-element"
                                 type="password"
                                 name="password"
-                                minlength="6"
+                                minLength="6"
                                 placeholder="Пароль"
                                 required/>
                             <button className="yellow-button popup__button">Войти</button>
